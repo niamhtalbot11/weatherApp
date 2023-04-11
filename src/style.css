@@ -1,0 +1,88 @@
+.weatherApp{
+    max-width:800px;
+    height:600px;
+    background-color:#FEF7FF;
+    padding-left:30px;
+    border:  #b39cd080 15px solid;
+    border-radius:10px;
+    padding-top: 40px;
+    margin:auto;
+    font-family: 'Lora', serif;
+  }
+
+.searchBar {
+  border: #ECE8EF 2px;
+  height:40px;
+}
+
+  .searchButton {
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+    font-size:18px;
+    background-color: #4392F1;
+    border: 2px solid #4392F1;
+    border-radius:15px;
+  }
+  .currentLocationButton {
+    color:white;
+    height: 40px;
+    width: 180px;
+    font-size: 18px;
+    border-radius:15px;
+    margin-left:15px;
+    background-color:#DC493A;
+    border:2px solid #DC493A;
+  }
+  
+  .searchButton:hover {
+    background: #F8FFF8;
+    color: #4392F1;
+    border-color: #4392F1;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .currentLocationButton:hover {
+    background: white;
+    color: #EB975E;
+    border-color: #AF642D;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .city {
+    font-size:48px;
+    padding-top:30px;
+    }
+  
+ul{
+list-style: none;
+padding: 0;
+font-size:21px;
+
+
+}
+
+
+.temp {
+  font-size:50px;
+  
+}
+.sunIcon, .windIcon, .cloudIcon, .rainCloudIcon, .sunCloudIcon {
+  font-size:60px;
+  padding-top:20px;
+  
+}
+
+
+
+
+
+
+ 
+
+  
+   
+  
+  
