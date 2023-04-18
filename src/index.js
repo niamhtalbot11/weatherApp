@@ -22,29 +22,27 @@ function formatDate(date) {
   //Geolocation
  
   function displayWeather(response){
-   console.log(response);
    document.querySelector(".city").innerHTML = response.data.name;
-   document.querySelector(".temp").innerHTML = Math.round (response.data.main.temp);
+   document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
    document.querySelector(".weatherDescription").innerHTML = response.data.weather[0].description;
    document.querySelector(".humidity").innerHTML= Math.round(response.data.main.humidity);
    document.querySelector(".windSpeed").innerHTML = Math.round(response.data.wind.speed);
+   iconElement = document.querySelector("#mainIcon");
+   iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+   );
+ 
   }
- 
   function search(event) {
-   event.preventDefault();
-  let city = document.querySelector("#searchBar").value;
- 
-  searchFunction(city);
- }
+    event.preventDefault();
+   let cityInputElement = document.querySelector("#searchBar").value;
+   searchFunction(cityInputElement);
+  }
  
   function searchFunction (city) {
     let apiKey= "29d1bf7ff9e07cdab460b43caa4c25ca";
     let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
- 
-  let form = document.querySelector(".searchForm");
-  form.addEventListener("submit",search);
  
   function retrievePosition(position){
    console.log(position.coords.lat);
@@ -55,17 +53,16 @@ function formatDate(date) {
    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
- 
+ //current location button
   function showCurrentLocation(event){
    event.preventDefault();
    navigator.geolocation.getCurrentPosition(retrievePosition);
   }
  
-  let currentLocationButton = document.querySelector(".currentLocationButton")
-  currentLocationButton.addEventListener("click", showCurrentLocation);
-  
- 
- searchFunction("Dublin");
- 
- 
- 
+ let form = document.querySelector(".searchForm");
+ form.addEventListener("submit",search);
+
+let currentLocationButton = document.querySelector(".currentLocationButton")
+currentLocationButton.addEventListener("click", showCurrentLocation);
+
+searchFunction("Dublin");
