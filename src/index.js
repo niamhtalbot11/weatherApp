@@ -76,7 +76,7 @@ function getForecast(coordinates){
   let apiUrl=`https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}&units=metric`
   axios.get(apiUrl).then(displayForecast);
 }
-console.log(forecastDay);
+
  //Geolocation
  function displayWeather(response){
   document.querySelector(".city").innerHTML = response.data.name;
