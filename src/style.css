@@ -5,7 +5,7 @@
     padding-left:30px;
     border:  #b39cd080 15px solid;
     border-radius:10px;
-    padding-top: 40px;
+    padding-top: 30px;
     margin:auto;
     font-family: 'Lora', serif;
   }
@@ -53,15 +53,13 @@
 
   .city {
     font-size:48px;
-    padding-top:30px;
+    padding-top:20px;
     }
   
 ul{
 list-style: none;
 padding: 0;
 font-size:21px;
-
-
 }
 
 
@@ -103,9 +101,9 @@ top:-10px;
 
 .weatherForecast{
   font-size:20px;
-  padding-bottom:20px;
+  
   padding-top:10px;
-  padding-left:30px;
+    
 }
 
 .weather-forecast-day{
