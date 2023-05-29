@@ -1,3 +1,4 @@
+//real time data
 function formatDate(date) {
     let days = [
       "Sunday",
@@ -26,7 +27,7 @@ function formatDay(timestamp){
   let days = ["Sun", "Mon", "Tue", "Wed","Thur","Fri","Sat"]
   return days[day];
     }
-
+//weekly forecast function
   function displayForecast(response) {
     console.log(response.data.daily);
     let forecast = response.data.daily;
