@@ -1,91 +1,121 @@
+
+body{
+  background-color:#F9F5EB;
+  padding:10px;
+}
+
 .weatherApp{
     max-width:800px;
-    height:600px;
-    background-color:#FEF7FF;
-    padding-left:30px;
-    border:  #b39cd080 15px solid;
-    border-radius:10px;
-    padding-top: 30px;
+    height:690px;
+    background-color:#EA5457;
+    padding-left:0px;
+    border:#EA5457 15px solid;
+    border-radius:20px;
     margin:auto;
-    font-family: 'Lora', serif;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
   }
 
-.searchBar {
-  border: #ECE8EF 2px;
+  .card-body {
+    max-width:100%;
+    background-color:		#FAF9F6;
+    border-radius:30px;
+    border:0px;
+   }
+
+  .searchBar {
+  border: 2px;
   height:40px;
-}
+  }
 
   .searchButton {
     color: rgb(255, 255, 255);
     height: 40px;
     width: 80px;
     font-size:18px;
-    background-color: #4392F1;
-    border: 2px solid #4392F1;
+    background-color: #002B5B;
+    border: 2px solid #002B5B;
     border-radius:15px;
   }
+
   .currentLocationButton {
+    margin:10px;
     color:white;
     height: 40px;
-    width: 180px;
+    width: 250px;
     font-size: 18px;
     border-radius:15px;
-    margin-left:15px;
-    background-color:#DC493A;
-    border:2px solid #DC493A;
+    margin-left:0px;
+    background-color:#002B5B;
+    border:2px solid #002B5B
   }
   
   .searchButton:hover {
     background: #F8FFF8;
-    color: #4392F1;
-    border-color: #4392F1;
+    color:#002B5B ;
+    border-color: #002B5B;
     transition: all 300ms ease-in-out;
     cursor: pointer;
   }
 
   .currentLocationButton:hover {
     background: white;
-    color: #EB975E;
-    border-color: #AF642D;
+    color: #002B5B;
+    border-color: #002B5B;
     transition: all 300ms ease-in-out;
     cursor: pointer;
   }
 
-  .city {
-    font-size:48px;
-    padding-top:20px;
+    .city {
+    font-size:55px;
+    font-weight: 550;letter-spacing:1.5px;
+    padding-top:10px;
+    text-align: center;
     }
-  
-ul{
-list-style: none;
-padding: 0;
-font-size:21px;
+
+    
+
+    .listIcon {
+      padding-right:10px;
+    }
+    
+     .humidityText, .windSpeedText, .feelsLikeText {
+      padding-bottom:20px;
+      padding-top:10px;
+      font-size:20px;
+     }
+    
+     .weatherDescription, .currentDate {
+      padding-top:10px;
+      font-size: 20px;
+      text-align: center;
+     }
+
+.weather-temperature {
+  text-align: center;
 }
-
-
-#temperature {
+  #temperature {
   font-size:60px;
   font-weight:400;
   position:relative;
   padding-left:20px;
- 
-  
-}
+  }
 
-li:first-letter {
+  li:first-letter {
   text-transform: capitalize;
-}
+  }
 
-#celsius-link, #fahrenheit-link, .divider{
+  #celsius-link, #fahrenheit-link, .divider{
   position:relative;
-  bottom:25px;
+  bottom:35px;
   padding-left:5px;
-}
+  
+  }
 
-a {
+  a {
     color:inherit;
     text-decoration:none;
-}
+  }
 
 #mainIcon{
   height:100px;
@@ -96,21 +126,30 @@ top:-10px;
 
 .weatherForecast{
   font-size:20px;
-  
+  padding-left:20px;
   padding-top:10px;
-    
 }
 
 .weather-forecast-day{
   font-size:22px;
 }
-.weather-forecast-temperature-min{
+
+.forecast-min{
 opacity:0.5;
 }
 
- 
+  .source {
+    margin:0 auto;
+    text-align: center;
+  }
+  
+ .forecast-day{
+  padding-left:12px;
+ }
+ .headIcon {
+  font-size:25px;
+  padding-left:10px;
+  padding-bottom:10px;
+ }
 
-  
-   
-  
-  
+

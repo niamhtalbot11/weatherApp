@@ -11,11 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/a9b556d9b6.js" crossorigin="anonymous"></script>
-
+    
     <link href="src/style.css" rel="stylesheet" type="text/css" />
     <link href="src/index.js" rel ="stylesheet" type="text/js"/>
   </head>
@@ -24,6 +24,7 @@
   <div class="container">
     <div class="weatherApp">
     <form class="searchForm">
+      <i class="fa-solid fa-seedling headIcon"></i>
     <div class="row">
       
           <div class="form-group col-6 searchBar">
@@ -36,54 +37,65 @@
               autofocus="on"/>  
           </div>
       
-              <button type="submit" class="btn btn-primary searchButton col-6">
+              <button type="submit" class="btn btn-primary searchButton col-3">
                 Go!
               </button>
 
-              <button type="button" class="btn btn-primary currentLocationButton col-3">
-                Current Location
-              </button>
-     </div>
-    </form>
-    
-<ul>
-      <li class="city">Amsterdam</li>
-      <li class="currentDate"> 19th</li>
-      <li class="weatherDescription">windy</li>
-</ul>
+            </div>
 
-<div  class="row">
+              <button type="button" class="btn btn-primary currentLocationButton">
+                Current Location
+                <i class="fa-solid fa-location-arrow"></i>
+              </button>
+    </form>
+   
+<div class="card">
+<div class="card-body">
+
+  <div class="row">
+  <div class="city col-6">Amsterdam</div>
+  </div>
+
+<div class="row">
+      <div class="currentDate col-6"> 19th</div>
+      <div class="col-6 feelsLikeText"><i class="fa-solid fa-temperature-full listIcon"></i> Feels like: <span class="feelsLike"></span></div>
+</div>
+ 
+<div class="row">
+      <div class="weatherDescription col-6">windy</div>
+      <div class="col-6 humidityText"><i class="fa-brands fa-hotjar listIcon"></i>Humidity: <span class="humidity"></span> %</div>
+</div>
+
+<div class="row">
   <div class="col-6">
   <div class="clearfix weather-temperature">
-  <img src="" alt="Clear" id="mainIcon" class="float-left" />
-  <strong id="temperature"></strong>
-  <span class="units">
-  <a href="#" id ="celsius-link" class="active">ºC</a>
-  <span class="divider">|</span>
-  <a href="#" id ="fahrenheit-link" class="active">ºF</a>
+    <img src="" alt="Clear" id="mainIcon" class="float-left" />
+    <strong id="temperature"></strong>
+    <span class="units">
+    <a href="#" id ="celsius-link" class="active">ºC</a>
+    <span class="divider">|</span>
+    <a href="#" id ="fahrenheit-link" class="active">ºF</a>
+    </span>
+  </div>
+  </div>
+    <span class="col-6 windSpeedText"><i class="fa-solid fa-wind listIcon"></i>Wind Speed: <span class="windSpeed"></span> k/hr</span>
   </span>
-  </div></div>
+</div>
+  
 
-
-<div class="col-6">
-  <ul>
-  <li>Humidity: <span class="humidity"></span>%</li>
-  <li>Wind Speed: <span class="windSpeed"></span> k/hr</li>
-  </ul>
 </div>
 </div>
 
 <br>
 
+<div class="card-body">
  <div class="weatherForecast" id="forecast"></div>
- <br>
-
-
-<a href="https://github.com/niamhtalbot11/weatherApp.git">Open Source Code by Niamh Talbot</a>
-
-
 </div>
 
+</div>
+</div>
+<div class="source"><a href="https://github.com/niamhtalbot11/weatherApp.git">Open Source Code by Niamh Talbot</a>
+</div>
 
 
     </div>

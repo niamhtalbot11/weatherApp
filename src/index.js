@@ -53,11 +53,11 @@ function formatDay(timestamp){
                         <div class="forecast-temperatures">
                           <span class="forecast-max">${Math.round(
                             forecastDay.temp.max
-                          )}º</span>
+                          )} º</span>
                           |
                           <span class="forecast-min">${Math.round(
                             forecastDay.temp.min
-                          )}º</span>
+                          )} º</span>
                         </div>
                         </div>`;
       }
@@ -71,7 +71,6 @@ function getForecast(coordinates){
   let apiKey ="ed238469f9b5e9d801834270e65449bc";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
-  
 }
 
 //Recieving Data
@@ -85,6 +84,9 @@ function getForecast(coordinates){
   iconElement = document.querySelector("#mainIcon");
   iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
    );
+   let feelsLike = Math.round(response.data.main.feels_like);
+   let feelsLikeElement = document.querySelector(".feelsLike");
+   feelsLikeElement.innerHTML = `${feelsLike} &deg;`;
 
    getForecast(response.data.coord);
    }
@@ -101,9 +103,7 @@ function getForecast(coordinates){
    let cityInputElement = document.querySelector("#searchBar").value;
    searchFunction(cityInputElement);
   }
- 
   searchFunction("Dublin");
-
 
   //current location api 
   function retrievePosition(position){
@@ -133,7 +133,6 @@ let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-
 //convert to celsius
 function convertToCelsius(event){
   event.preventDefault();
@@ -143,7 +142,6 @@ function convertToCelsius(event){
   
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
 
 let celsiusTemperature = null;
 
@@ -159,5 +157,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-
 displayForecast();
+console.log(displayForecast);
